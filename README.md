@@ -1,117 +1,137 @@
 # StudyBuddy | School Student Companion
 
 ## Overview
-SrudyBuddy is a comprehensive digital platform designed to assist students in managing their academic life efficiently. It includes features such as a dashboard, schedule management, course materials, grade tracking, study timers, an AI coach, and much more. The application is built with a responsive UI and supports dark mode for better usability.
+StudyBuddy is a comprehensive digital platform designed to assist students in managing their academic life efficiently. It includes features such as a dashboard, schedule management, course materials, grade tracking, study timers, an AI coach, and much more. The application is built with a responsive UI and supports dark mode for better usability.
 
 ## Features
-## 1. Dashboard
-### Overview
-The central hub of the application, providing quick access to key information and features.
-### Components
-•	Metrics Cards:
-o	Courses: Displays the total number of courses the student is enrolled in.
-o	Assignments Due: Shows the number of pending assignments with a weekly comparison.
-o	Overall Grade: Presents the student's current overall grade with a semester comparison.
-•	Today's Schedule: A quick view of the day's classes and activities.
-•	Upcoming Assignments: A list of the most imminent assignments due.
 
-## 2. Schedule
-### Integrated Calendar
-•	Combines academic and extracurricular activities in one view.
-•	Supports integration with Google Calendar and Outlook.
-•	Provides filtering options by date, keyword, group, and event type.
-•	Offers both grid and list views for flexible scheduling.
-### Additional Features
-•	Today's Events: A focused view of the current day's activities.
-•	Sports Events: Highlights upcoming sports practices and matches.
+### 1. Dashboard
+**Location:** `app/page.tsx`
+- Overview of key metrics: Courses, Assignments Due, and Overall Grade
+- Today's Schedule
+- Upcoming Assignments
+- Quick access to main features through metric cards
 
-## 3. Courses
-### Course Catalog
-•	Lists all enrolled courses with detailed information.
-Textbook Access
-•	Provides direct links to course textbooks and reading materials.
-### PDF Viewer
-•	Integrated viewer for textbooks and course materials.
-•	Supports highlighting, note-taking, and text search within documents.
-•	AI-powered assistant for answering questions about the text.
+### 2. Schedule
+**Location:** `app/schedule/page.tsx`
+- Integrated Calendar view
+- Today's Events
+- Sports Events
+- Google and Outlook calendar integration options
 
-## 4. Assignments
-### Assignment Tracker
-•	Organizes assignments by status: Not Started, Pending, In Progress, Completed.
-•	Allows status updates and priority setting for each assignment.
-### Add New Assignment
-•	Feature to input new assignments with due dates and course information.
+### 3. Courses
+**Location:** `app/courses/page.tsx`
+- List of enrolled courses
+- Course materials (textbooks, notes)
+- Ability to view PDF textbooks
+- Multi-language support (English, Hindi, Urdu, Telugu, Kannada, Tamil, Malayalam)
 
-## 5. Grades
-### Grade Overview
-•	Displays current grades for all courses.
-### Historical Data
-•	Shows grade trends and comparisons with previous terms.
-### Performance Indicators
-•	Visual cues (e.g., up/down arrows) to indicate improvement or decline in each subject.
+### 4. Assignments
+**Location:** `app/assignments/page.tsx`
+- List of assignments categorized by status (Not Started, Pending, In Progress, Completed)
+- Assignment details including due date, priority, and course
+- Ability to add new assignments
+- Status update functionality
 
-## 6. Study Timer
-### Pomodoro Technique
-•	Implements a customizable study timer based on the Pomodoro method.
-### Session Tracking
-•	Records study sessions and provides focus statistics.
-### Break Reminders
-•	Automatically notifies when it's time for a break or to resume studying.
+### 5. Grades
+**Location:** `app/grades/page.tsx`
+- Current term grades
+- Previous term grades
+- Visual indicators for grade improvements or declines
+- Overall grade average
 
-## 7. AI Coach
-### Doubt Solving
-•	AI-powered assistant for answering academic questions.
-•	Supports text and image inputs for complex problems.
-### Note Generation
-•	Automatically generates study notes on given topics.
-•	Provides structured, easy-to-understand summaries.
+### 6. Study Timer
+**Location:** `app/study-timer/page.tsx`
+- Pomodoro technique timer
+- Customizable study and break durations
+- Focus tracking
+- Session history
 
-## 8. Resource Library
-### Categorized Resources
-•	Organizes study materials by subject, type (notes, past papers, videos), and grade level.
-### Search and Filter
-•	Allows easy discovery of relevant study materials.
-### Contribution System
-•	Enables students to upload and share their own study resources.
+### 7. AI Coach
+**Location:** `app/ai-coach/page.tsx`
+- AI-powered doubt solving
+- Note generation feature
+- Image upload for visual problem-solving
+- Chat interface for interacting with AI
 
-## 9. Support
-### FAQ Section
-•	Comprehensive list of frequently asked questions and answers.
-### Contact Form
-•	Direct line of communication with the support team.
-### Live Chat (Coming Soon)
-•	Real-time support feature.
-### Community Forums
-•	Platform for students to discuss and help each other.
-### Bug Reporting
-•	System for users to report technical issues.
+### 8. Resource Library
+**Location:** `app/resource-library/page.tsx`
+- Categorized educational resources (past papers, notes, videos)
+- Search and filter functionality
+- Grade and subject-specific resources
 
-## 10. Settings
-### Profile Management
-•	Allows users to update personal information and preferences.
-### Theme Customization
-•	Toggle between light and dark modes.
-•	Schedule automatic theme changes based on time of day.
-### Study Preferences
-•	Customize Pomodoro timer durations.
-•	Set auto-save preferences for notes.
-### Accessibility Options
-•	Adjust font sizes and text-to-speech settings.
-•	Enable word-level translations for multi-language support.
+### 9. Support
+**Location:** `app/support/page.tsx`
+- FAQ section
+- Contact form
+- Live chat (placeholder for future implementation)
+- Community forums and resources
+- Bug reporting system
 
-## 11. Authentication
-### Login/Signup
-•	Secure user authentication system.
-### Password Recovery
-•	Feature to reset forgotten passwords.
+### 10. Settings
+**Location:** `app/settings/page.tsx`
+- Profile settings
+- App preferences (dark mode, font size, language)
+- Study preferences (Pomodoro timer settings)
+- Privacy and data management
 
-## 12. Cross-cutting Features
-### Responsive Design
-•	Ensures a seamless experience across desktop and mobile devices.
-### Data Persistence
-•	Saves user preferences and study data across sessions.
-### Offline Support (Potential Feature)
-•	Allows access to certain features without an internet connection.
+### 11. Scheduled Theme
+**Location:** `app/settings/scheduled-theme/page.tsx`
+- Automatic theme switching based on time
+- Custom schedule or sunset-to-sunrise option
+
+### 12. Authentication
+**Location:** `app/login/page.tsx` and `app/signup/page.tsx`
+- User login functionality
+- New user registration
+- Password management (implied, not fully implemented)
+
+### 13. PDF Viewer
+**Location:** `components/pdf-viewer.tsx` and `components/pdf-viewer-modal.tsx`
+- Integrated PDF viewer for textbooks and resources
+- Highlighting and note-taking features
+- AI-powered chat for asking questions about the content
+
+### 14. Metrics Card
+**Location:** `components/metrics-card.tsx`
+- Reusable component for displaying key metrics
+- Used on the dashboard for quick information display
+
+### 15. Schedule Components
+**Location:** `components/schedule.tsx`, `components/sports-events.tsx`, `components/todays-events.tsx`
+- Display of daily schedule
+- Sports events listing
+- Today's events overview
+
+### 16. Assignments Table
+**Location:** `components/assignments-table.tsx`
+- Reusable component for displaying assignments
+- Used in both dashboard and assignments page
+
+### 17. Integrated Calendar
+**Location:** `components/integrated-calendar.tsx`
+- Full calendar view with events
+- Filtering and search capabilities
+
+### 18. Theme Management
+**Location:** `contexts/ThemeContext.tsx`
+- Dark mode toggle
+- Scheduled theme changes
+
+### 19. Timer Management
+**Location:** `contexts/TimerSettingsContext.tsx`, `contexts/TimerContext.tsx`
+- Pomodoro timer settings
+- Timer state management
+
+### 20. Textbook Context
+**Location:** `contexts/TextbookContext.tsx`
+- Management of textbook viewing state
+
+### 21. Global Styling
+**Location:** `styles/globals.css`
+- Application-wide styles and theme variables
+
+
 
 ## Conclusion
 The Student Companion Application is designed to be a comprehensive tool for students, combining organizational features with AI-powered learning assistance. It aims to improve study efficiency, track academic progress, and provide easy access to resources, all within a user-friendly interface.
