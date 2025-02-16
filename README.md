@@ -4,70 +4,117 @@
 SrudyBuddy is a comprehensive digital platform designed to assist students in managing their academic life efficiently. It includes features such as a dashboard, schedule management, course materials, grade tracking, study timers, an AI coach, and much more. The application is built with a responsive UI and supports dark mode for better usability.
 
 ## Features
-
-### 1. Dashboard
-**Purpose:** Provides an overview of the student's academic life at a glance.  
-**Implementation:** Located in `app/page.tsx`. Uses `MetricsCard`, `Schedule`, and `AssignmentsTable` components.  
-**Benefits:** Quick access to key academic statistics, class schedules, and assignments.
-
-### 2. Schedule
-**Purpose:** Displays a student's full academic and extracurricular schedule.  
-**Implementation:** Located in `app/schedule/page.tsx`. Uses `IntegratedCalendar`, `TodaysEvents`, and `SportsEvents` components.  
-**Benefits:** Helps students manage time effectively by displaying all commitments in one place.
-
-### 3. Courses
-**Purpose:** Centralizes all course-related information and resources.  
-**Implementation:** Located in `app/courses/page.tsx`. Provides tabs for `Courses`, `Books`, and `Notes`.  
-**Benefits:** Streamlines access to course materials, improving organization and study efficiency.
-
-### 4. Grades
-**Purpose:** Tracks academic performance.  
-**Implementation:** Located in `app/grades/page.tsx`. Displays grades in a tabular format with visual indicators for trends.  
-**Benefits:** Helps students monitor progress and identify areas for improvement.
-
-### 5. Study Timer (Pomodoro Technique)
-**Purpose:** Aids in time management through structured study sessions.  
-**Implementation:** Located in `app/study-timer/page.tsx`. Uses React hooks to alternate between study and break periods.  
-**Benefits:** Enhances focus and prevents burnout with controlled work-break cycles.
-
-### 6. AI Coach
-**Purpose:** Provides personalized academic assistance using AI.  
-**Implementation:** Located in `app/ai-coach/page.tsx`. Uses OpenAI's GPT model to generate responses.  
-**Benefits:** Offers on-demand tutoring, explanations, and study notes generation.
-
-### 7. Resource Library
-**Purpose:** Provides categorized access to educational resources.  
-**Implementation:** Located in `app/resource-library/page.tsx`. Implements search, filters, and a card-based layout.  
-**Benefits:** Helps students easily find study materials, past papers, and learning resources.
-
-### 8. Support
-**Purpose:** Offers various support channels for students.  
-**Implementation:** Located in `app/support/page.tsx`. Includes FAQ, contact form, live chat, and bug reporting.  
-**Benefits:** Ensures students receive assistance and guidance when needed.
-
-### 9. Settings
-**Purpose:** Allows users to personalize the app.  
-**Implementation:** Located in `app/settings/page.tsx`. Includes profile settings, app preferences, study settings, and a dark mode toggle.  
-**Benefits:** Customization options enhance user experience and engagement.
-
-### 10. Authentication (Login/Signup)
-**Purpose:** Secures user accounts and personalizes experiences.  
-**Implementation:** Located in `app/login/page.tsx` and `app/signup/page.tsx`. Uses form inputs for user credentials.  
-**Benefits:** Ensures data security and enables personalized interactions.
-
-### 11. Responsive Layout
-**Purpose:** Ensures usability across devices.  
-**Implementation:** Uses a responsive sidebar layout in `app/layout.tsx` with dynamic adjustments.  
-**Benefits:** Provides a seamless experience across different screen sizes.
-
-### 12. Dark Mode
-**Purpose:** Reduces eye strain and enhances UI customization.  
-**Implementation:** Uses `ThemeProvider` in `contexts/ThemeContext.tsx` with a settings page toggle.  
-**Benefits:** Improves usability in different lighting conditions.
-
+## 1. Dashboard
+## Overview
+The central hub of the application, providing quick access to key information and features.
+## Components
+•	Metrics Cards:
+o	Courses: Displays the total number of courses the student is enrolled in.
+o	Assignments Due: Shows the number of pending assignments with a weekly comparison.
+o	Overall Grade: Presents the student's current overall grade with a semester comparison.
+•	Today's Schedule: A quick view of the day's classes and activities.
+•	Upcoming Assignments: A list of the most imminent assignments due.
+## ________________________________________
+## 2. Schedule
+## Integrated Calendar
+•	Combines academic and extracurricular activities in one view.
+•	Supports integration with Google Calendar and Outlook.
+•	Provides filtering options by date, keyword, group, and event type.
+•	Offers both grid and list views for flexible scheduling.
+## Additional Features
+•	Today's Events: A focused view of the current day's activities.
+•	Sports Events: Highlights upcoming sports practices and matches.
+## ________________________________________
+## 3. Courses
+## Course Catalog
+•	Lists all enrolled courses with detailed information.
+Textbook Access
+•	Provides direct links to course textbooks and reading materials.
+## PDF Viewer
+•	Integrated viewer for textbooks and course materials.
+•	Supports highlighting, note-taking, and text search within documents.
+•	AI-powered assistant for answering questions about the text.
+## ________________________________________
+## 4. Assignments
+## Assignment Tracker
+•	Organizes assignments by status: Not Started, Pending, In Progress, Completed.
+•	Allows status updates and priority setting for each assignment.
+## Add New Assignment
+•	Feature to input new assignments with due dates and course information.
+## ________________________________________
+## 5. Grades
+## Grade Overview
+•	Displays current grades for all courses.
+## Historical Data
+•	Shows grade trends and comparisons with previous terms.
+## Performance Indicators
+•	Visual cues (e.g., up/down arrows) to indicate improvement or decline in each subject.
+## ________________________________________
+## 6. Study Timer
+## Pomodoro Technique
+•	Implements a customizable study timer based on the Pomodoro method.
+## Session Tracking
+•	Records study sessions and provides focus statistics.
+## Break Reminders
+•	Automatically notifies when it's time for a break or to resume studying.
+## ________________________________________
+## 7. AI Coach
+## Doubt Solving
+•	AI-powered assistant for answering academic questions.
+•	Supports text and image inputs for complex problems.
+## Note Generation
+•	Automatically generates study notes on given topics.
+•	Provides structured, easy-to-understand summaries.
+## ________________________________________
+## 8. Resource Library
+## Categorized Resources
+•	Organizes study materials by subject, type (notes, past papers, videos), and grade level.
+## Search and Filter
+•	Allows easy discovery of relevant study materials.
+## Contribution System
+•	Enables students to upload and share their own study resources.
+## ________________________________________
+## 9. Support
+### FAQ Section
+•	Comprehensive list of frequently asked questions and answers.
+### Contact Form
+•	Direct line of communication with the support team.
+### Live Chat (Coming Soon)
+•	Real-time support feature.
+### Community Forums
+•	Platform for students to discuss and help each other.
+### Bug Reporting
+•	System for users to report technical issues.
+## ________________________________________
+## 10. Settings
+### Profile Management
+•	Allows users to update personal information and preferences.
+### Theme Customization
+•	Toggle between light and dark modes.
+•	Schedule automatic theme changes based on time of day.
+### Study Preferences
+•	Customize Pomodoro timer durations.
+•	Set auto-save preferences for notes.
+### Accessibility Options
+•	Adjust font sizes and text-to-speech settings.
+•	Enable word-level translations for multi-language support.
+## ________________________________________
+## 11. Authentication
+### Login/Signup
+•	Secure user authentication system.
+### Password Recovery
+•	Feature to reset forgotten passwords.
+## ________________________________________
+## 12. Cross-cutting Features
+### Responsive Design
+•	Ensures a seamless experience across desktop and mobile devices.
+### Data Persistence
+•	Saves user preferences and study data across sessions.
+### Offline Support (Potential Feature)
+•	Allows access to certain features without an internet connection.
+## ________________________________________
 ## Conclusion
-The School Student Companion provides an all-in-one solution for managing academic life. It streamlines scheduling, studying, and access to learning resources, enhancing productivity and engagement.
+The Student Companion Application is designed to be a comprehensive tool for students, combining organizational features with AI-powered learning assistance. It aims to improve study efficiency, track academic progress, and provide easy access to resources, all within a user-friendly interface.
 
----
-This document serves as a reference for the project's UI and functionality. For further details, please consult the implementation files.
+
 
